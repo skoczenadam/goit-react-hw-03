@@ -12,18 +12,18 @@ const phoneBook = [
 ];
 
 const App = () => {
-  const [contacts, setContacts] = useState(() => {
-    try {
-      const contactsFromLocalStore = localStorage.getItem("phonebook");
-      if (contactsFromLocalStore !== null) {
-        return JSON.parse(contactsFromLocalStore);
-      }
-      return {};
-    } catch (e) {
-      return phoneBook;
-    }
-  });
-  // const [contacts, setContacts] = useState(phoneBook);
+  // const [contacts, setContacts] = useState(() => {
+  //   try {
+  //     const contactsFromLocalStore = localStorage.getItem("phonebook");
+  //     if (contactsFromLocalStore !== null) {
+  //       return JSON.parse(contactsFromLocalStore);
+  //     }
+  //     return {};
+  //   } catch (e) {
+  //     return phoneBook;
+  //   }
+  // });
+  const [contacts, setContacts] = useState(phoneBook);
   const [filter, setFilter] = useState("");
 
   const handleFilterChange = (e) => {
