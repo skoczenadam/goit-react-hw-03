@@ -1,7 +1,7 @@
 import "./App.css";
-import ContactForm from "./components/ContactForm";
-import SearchBox from "./components/SearchBox";
-import ContactList from "./components/ContactList";
+import ContactForm from "./ContactForm";
+import SearchBox from "./SearchBox";
+import ContactList from "./ContactList";
 import { useState, useEffect } from "react";
 
 // const phoneBook = [
