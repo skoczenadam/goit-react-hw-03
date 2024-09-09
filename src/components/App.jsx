@@ -20,7 +20,7 @@ const App = () => {
       }
       return {};
     } catch (e) {
-      return [];
+      return [{}];
     }
   });
   // const [contacts, setContacts] = useState(phoneBook);
