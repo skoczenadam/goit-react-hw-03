@@ -19,7 +19,7 @@ const App = () => {
         return JSON.parse(contactsFromLocalStore);
       }
       return {};
-    } catch (e) {
+    } catch {
       return phoneBook;
     }
   });
