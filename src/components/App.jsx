@@ -23,6 +23,7 @@ const App = () => {
       return [];
     }
   });
+  // const [contacts, setContacts] = useState(phoneBook);
   const [filter, setFilter] = useState("");
 
   const handleFilterChange = (e) => {
