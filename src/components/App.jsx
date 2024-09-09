@@ -12,18 +12,18 @@ const phoneBook = [
 ];
 
 const App = () => {
-  const [contacts, setContacts] = useState(() => {
-    try {
-      const contactsFromLocalStore = localStorage.getItem("phonebook");
-      if (contactsFromLocalStore !== null) {
-        return JSON.parse(contactsFromLocalStore);
-      }
-      return {};
-    } catch {
-      return phoneBook;
-    }
-  });
-  // const [contacts, setContacts] = useState(phoneBook);
+  // const [contacts, setContacts] = useState(() => {
+  //   try {
+  //     const contactsFromLocalStore = localStorage.getItem("phonebook");
+  //     if (contactsFromLocalStore !== null) {
+  //       return JSON.parse(contactsFromLocalStore);
+  //     }
+  //     return {};
+  //   } catch (e) {
+  //     return [];
+  //   }
+  // });
+  const [contacts, setContacts] = useState(phoneBook);
   const [filter, setFilter] = useState("");
 
   const handleFilterChange = (e) => {
@@ -35,7 +35,6 @@ const App = () => {
   );
 
   const deleteContact = (id) => {
-    console.log("delete", id);
     setContacts((prev) => prev.filter((contact) => contact.id !== id));
   };
 
