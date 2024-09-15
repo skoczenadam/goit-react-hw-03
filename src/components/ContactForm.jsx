@@ -11,10 +11,12 @@ const initialValues = {
 
 const FeedbackSchema = Yup.object().shape({
   name: Yup.string()
+    .matches(/^[A-Za-z \d]+$/, "No digits, no specjal characters, ")
     .min(3, "Too Short!")
     .max(50, "Too long!")
     .required("Required"),
   number: Yup.string()
+    .matches(/^[0-9]+$/, "Must be only digits")
     .min(3, "Too short")
     .max(256, "Too long")
     .required("Required"),
